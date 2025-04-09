@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Ritual Receipt Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temple Ritual Receipt Generator</h1>
+        <label for="name">Recipient's Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <h2>Select Rituals</h2>
+        <div id="items">
+            <div class="item">
+                <input type="checkbox" class="item-checkbox" data-price="30"> Ganapati Homam - ₹30
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox" data-price="50"> Prasadam - ₹50
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox" data-price="100"> Navagraha Homam - ₹100
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox" data-price="200"> Satyanarayana Pooja - ₹200
+            </div>
+        </div>
+
+        <button id="calculate">Calculate Total</button>
+        <h3>Total: ₹<span id="total">0</span></h3>
+        <button id="print">Print Receipt</button>
+    </div>
+
+    <div id="receipt" class="hidden">
+        <h2>Receipt</h2>
+        <p><strong>Name:</strong> <span id="receipt-name"></span></p>
+        <h3>Selected Rituals:</h3>
+        <ul id="receipt-items"></ul>
+        <h3>Total: ₹<span id="receipt-total"></span></h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
